@@ -16,6 +16,7 @@ def getNthFib(n):
     return current
 
 if __name__ == '__main__':
+    # Expected only one integer as input
     input = sys.stdin.read()
     n = int(input)
     print(getNthFib(n))

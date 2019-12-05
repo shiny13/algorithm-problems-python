@@ -9,13 +9,13 @@ def riverSizes(matrix):
         for j in range(len(matrix[i])):
             if visited[i][j]:
                 continue
-            currentRiverSize = traverseNode(i, j, matrix, visited, sizes)
+            currentRiverSize = traverseNode(i, j, matrix, visited)
             if currentRiverSize > 0:
                 sizes.append(currentRiverSize)
     sizes.sort(reverse=False)
     return sizes
 
-def traverseNode(i, j, matrix, visited, sizes):
+def traverseNode(i, j, matrix, visited):
     currentRiverSize = 0
     #using a stack for DFS
     nodesToExplore = [[i,j]]

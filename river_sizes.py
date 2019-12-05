@@ -12,6 +12,7 @@ def riverSizes(matrix):
             currentRiverSize = traverseNode(i, j, matrix, visited)
             if currentRiverSize > 0:
                 sizes.append(currentRiverSize)
+    #sort the sizes array in ascending order 
     sizes.sort(reverse=False)
     return sizes
 
